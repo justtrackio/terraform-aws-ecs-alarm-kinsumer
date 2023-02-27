@@ -23,7 +23,7 @@
 
 | Name | Type |
 |------|------|
-| [aws_cloudwatch_metric_alarm.milliseconds_behind](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_metric_alarm) | resource |
+| [aws_cloudwatch_metric_alarm.default](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_metric_alarm) | resource |
 
 ## Inputs
 
@@ -55,13 +55,13 @@
 | <a name="input_stage"></a> [stage](#input\_stage) | ID element. Usually used to indicate role, e.g. 'prod', 'staging', 'source', 'build', 'test', 'deploy', 'release' | `string` | `null` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | Additional tags (e.g. `{'BusinessUnit': 'XYZ'}`).<br>Neither the tag keys nor the tag values will be modified by this module. | `map(string)` | `{}` | no |
 | <a name="input_tenant"></a> [tenant](#input\_tenant) | ID element \_(Rarely used, not included by default)\_. A customer identifier, indicating who this instance of a resource is for | `string` | `null` | no |
-| <a name="input_threshold_seconds_behind"></a> [threshold\_seconds\_behind](#input\_threshold\_seconds\_behind) | The number of seconds an event may be old before triggering the alarm | `number` | `3600` | no |
+| <a name="input_threshold"></a> [threshold](#input\_threshold) | The number of seconds an event may be old before triggering the alarm | `number` | `3600` | no |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| <a name="output_alarm_arn"></a> [alarm\_arn](#output\_alarm\_arn) | The ARN of the CloudWatch metric alarm |
-| <a name="output_alarm_id"></a> [alarm\_id](#output\_alarm\_id) | The ID of the CloudWatch metric alarm |
 | <a name="output_alarm_name"></a> [alarm\_name](#output\_alarm\_name) | The name of the CloudWatch metric alarm |
+| <a name="output_arn"></a> [arn](#output\_arn) | The ARN of the CloudWatch metric alarm |
+| <a name="output_id"></a> [id](#output\_id) | The ID of the CloudWatch metric alarm |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->

@@ -28,7 +28,7 @@ variable "period" {
   description = "The period in seconds over which the specified statistic is applied"
 }
 
-variable "threshold_seconds_behind" {
+variable "threshold" {
   type        = number
   default     = 3600
   description = "The number of seconds an event may be old before triggering the alarm"

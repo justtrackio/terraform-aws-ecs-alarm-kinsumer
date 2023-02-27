@@ -8,7 +8,7 @@ module "cloudwatch_label" {
   context = module.this.context
 }
 
-resource "aws_cloudwatch_metric_alarm" "milliseconds_behind" {
+resource "aws_cloudwatch_metric_alarm" "default" {
   count = module.this.enabled ? 1 : 0
 
   alarm_description   = var.alarm_description
@@ -17,7 +17,7 @@ resource "aws_cloudwatch_metric_alarm" "milliseconds_behind" {
   evaluation_periods  = var.evaluation_periods
   datapoints_to_alarm = var.datapoints_to_alarm
   comparison_operator = "GreaterThanThreshold"
-  threshold           = var.threshold_seconds_behind * 1000
+  threshold           = var.threshold * 1000
   treat_missing_data  = "breaching"
 
   namespace   = module.cloudwatch_label.id
