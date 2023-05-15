@@ -22,18 +22,6 @@ variable "evaluation_periods" {
   description = "The number of periods over which data is compared to the specified threshold"
 }
 
-variable "period" {
-  type        = number
-  default     = 60
-  description = "The period in seconds over which the specified statistic is applied"
-}
-
-variable "threshold" {
-  type        = number
-  default     = 3600
-  description = "The number of seconds an event may be old before triggering the alarm"
-}
-
 variable "kinsumer_name" {
   type        = string
   description = "The name of the kinsumer"
@@ -50,4 +38,16 @@ variable "label_orders" {
   })
   default     = {}
   description = "Overrides the `labels_order` for the different labels to modify ID elements appear in the `id`"
+}
+
+variable "period" {
+  type        = number
+  default     = 60
+  description = "The period in seconds over which the specified statistic is applied"
+}
+
+variable "threshold" {
+  type        = number
+  default     = 3600
+  description = "The number of seconds an event may be old before triggering the alarm"
 }
