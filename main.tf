@@ -32,6 +32,7 @@ resource "aws_cloudwatch_metric_alarm" "default" {
     Priority = each.value.alarm_priority
   }, jsondecode(var.alarm_description)))
   alarm_name          = "${module.this.id}-kinsumer-${var.kinsumer_name}-milliseconds-behind-${each.key}"
+  period              = var.period
   datapoints_to_alarm = each.value.datapoints_to_alarm
   comparison_operator = "GreaterThanThreshold"
   evaluation_periods  = each.value.evaluation_periods
