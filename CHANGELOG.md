@@ -1,3 +1,11 @@
+## [1.1.0](https://github.com/justtrackio/terraform-aws-ecs-alarm-kinsumer/compare/v1.0.1...v1.1.0) (2024-11-22)
+
+
+### Features
+
+* add alarm levels ([362c33a](https://github.com/justtrackio/terraform-aws-ecs-alarm-kinsumer/commit/362c33a6dc7feafdd4b5f0b525a3122d1bce146f))
+* add alarm topic arn convention ([#20](https://github.com/justtrackio/terraform-aws-ecs-alarm-kinsumer/issues/20)) ([42dc33f](https://github.com/justtrackio/terraform-aws-ecs-alarm-kinsumer/commit/42dc33f13b4c92c42bb804912662adf877ddde86))
+
 ## [1.0.1](https://github.com/justtrackio/terraform-aws-ecs-alarm-kinsumer/compare/v1.0.0...v1.0.1) (2023-05-15)
 
 
